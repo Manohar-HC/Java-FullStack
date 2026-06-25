@@ -1,4 +1,4 @@
-package JAVA.DAY01;
+package Java.day01;
 
 public class FirstJavaProgram {
 

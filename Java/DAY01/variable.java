@@ -1,4 +1,4 @@
-package JAVA.DAY01;
+package Java.day01;
 
 public class variable {
     public static void main(String[] args) {
