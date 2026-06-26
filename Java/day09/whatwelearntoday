@@ -1,0 +1,14 @@
+We'll start Object-Oriented Programming (OOP), which is the heart of Java.
+
+We'll cover it in ELI10 style:
+
+Class (What is a blueprint?)
+Object (What is a real object?)
+Constructor
+this keyword
+Encapsulation
+Inheritance
+Polymorphism
+Abstraction
+
+Once you understand OOP, you'll be ready to learn Spring Boot, because Spring Boot is built on these OOP concepts.
