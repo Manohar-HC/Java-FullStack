@@ -1,0 +1,216 @@
+DAY 10 - CONSTRUCTOR
+
+Today you'll learn something every Java project uses.
+
+Problem
+
+Right now you write:
+
+Student s1 = new Student();
+
+s1.name = "Manohar";
+s1.age = 24;
+
+Every time.
+
+Suppose you create 500 students.
+
+You'll write
+
+name
+age
+
+500 times.
+
+That's boring.
+
+Constructor Solves This
+
+Think you buy a new phone.
+
+When you buy it
+
+Brand
+Storage
+RAM
+
+are already set.
+
+You don't open the phone and install RAM yourself.
+
+Constructor works the same way.
+
+Constructor
+class Student{
+
+    Student()
+    {
+        System.out.println("Object Created");
+    }
+
+}
+
+Notice carefully.
+
+There is
+
+NO return type
+
+Not even
+
+void
+Object Creation
+Student s1 = new Student();
+
+Output
+
+Object Created
+
+Java automatically calls the constructor.
+
+You don't call it yourself.
+
+Parameterized Constructor
+class Student{
+
+    String name;
+
+    int age;
+
+    Student(String n,int a){
+
+        name = n;
+
+        age = a;
+
+    }
+
+}
+
+Create object
+
+Student s1 = new Student("Manohar",24);
+
+Print
+
+System.out.println(s1.name);
+
+System.out.println(s1.age);
+
+Output
+
+Manohar
+
+24
+
+Notice something?
+
+No need to write
+
+s1.name="Manohar";
+
+The constructor did it.
+
+Why Constructor?
+
+Without constructor
+
+Student s1 = new Student();
+
+s1.name="Manohar";
+
+s1.age=24;
+
+With constructor
+
+Student s1 = new Student("Manohar",24);
+
+Less code.
+
+Cleaner code.
+
+Professional code.
+
+Homework
+HW1
+
+Create
+
+class Car
+
+Variables
+
+brand
+
+price
+
+Constructor
+
+Car(String b,int p)
+
+Create
+
+Car c1 = new Car("BMW",5000000);
+
+Print both values.
+
+HW2
+
+Create
+
+class Mobile
+
+Variables
+
+brand
+
+price
+
+Constructor
+
+Create
+
+Samsung
+
+50000
+HW3
+
+Create
+
+Employee
+
+Constructor
+
+Name
+
+Salary
+
+Print values.
+
+Challenge
+
+Without running.
+
+class Test{
+
+    Test(){
+
+        System.out.println("Hello");
+
+    }
+
+}
+
+public class Main{
+
+    public static void main(String[] args){
+
+        Test t1 = new Test();
+
+        Test t2 = new Test();
+
+    }
+
+}
+
+Question: What will the output be, and why?
