@@ -1,0 +1,351 @@
+Forget the word Encapsulation for 10 minutes.
+
+Let's understand it from real life.
+
+Imagine You Have ₹1,00,000 💰
+
+Where do you keep it?
+
+Option 1
+
+Pocket
+
+Anyone can steal it.
+
+❌ Bad
+
+Option 2
+
+Locker
+
+Only you have the key.
+
+✅ Safe
+
+Java says:
+
+Don't leave important data outside.
+
+Keep it inside a locker.
+
+That locker is:
+
+private
+Without private
+class Student{
+
+    String name;
+    int age;
+
+}
+
+Main
+
+Student s1 = new Student();
+
+s1.age = -500;
+
+Question...
+
+Can a student's age be
+
+-500
+
+❌ Impossible.
+
+But Java allows it because the variable is public (accessible).
+
+So Java says...
+
+Hide it.
+
+class Student{
+
+    private int age;
+
+}
+
+Now try
+
+Student s1 = new Student();
+
+s1.age = 24;
+
+Java says
+
+❌ ERROR
+
+Why?
+
+Because
+
+private
+
+means
+
+Nobody outside this class can touch this variable.
+
+Then How Do We Change Age?
+
+Imagine a locked room.
+
+Outside Person
+
+      🚪
+
+Locked Room
+
+Age
+
+You can't go inside.
+
+So you ring the bell.
+
+The bell is
+
+setAge()
+Setter
+public void setAge(int age){
+
+    this.age = age;
+
+}
+
+Read like English.
+
+Set Age
+
+↓
+
+Take age from outside
+
+↓
+
+Store it inside object
+
+Now
+
+Instead of
+
+s1.age = 24;
+
+We do
+
+s1.setAge(24);
+
+Java says
+
+OK.
+
+I'll store 24 safely.
+Getter
+
+Now suppose you want to see the age.
+
+Can you do
+
+System.out.println(s1.age);
+
+❌ No
+
+Private.
+
+Instead ask politely.
+
+s1.getAge();
+
+Getter opens the locker and returns the value.
+
+public int getAge(){
+
+    return age;
+
+}
+
+Read like English.
+
+Get Age
+
+↓
+
+Return Age
+Full Flow
+Student s1 = new Student();
+
+Object created.
+
+Age
+
+0
+
+(default value)
+
+Now
+
+s1.setAge(24);
+
+Inside Java
+
+this.age = 24;
+
+Now object
+
+Age = 24
+
+Now
+
+System.out.println(s1.getAge());
+
+Getter returns
+
+24
+
+Output
+
+24
+Think of Instagram
+
+Can anyone directly change your password?
+
+❌ No.
+
+They must go to
+
+Settings
+
+↓
+
+Enter Old Password
+
+↓
+
+Enter New Password
+
+↓
+
+Save
+
+That Settings page is like a setter.
+
+You don't directly touch Instagram's database.
+
+Why Getter & Setter?
+
+Without them:
+
+s1.age = -100;
+
+Wrong.
+
+With setter:
+
+public void setAge(int age){
+
+    if(age > 0){
+
+        this.age = age;
+
+    }
+
+}
+
+Now
+
+s1.setAge(-100);
+
+Nothing happens.
+
+Your data stays safe.
+
+This is the biggest advantage of Encapsulation.
+
+Golden Formula
+private
+
+↓
+
+Hide Data
+
+↓
+
+Setter
+
+↓
+
+Put Data Inside
+
+↓
+
+Getter
+
+↓
+
+Take Data Outside
+One Small Program
+
+Just read it.
+
+class Student {
+
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getName() {
+        return name;
+    }
+}
+
+Main
+
+Student s1 = new Student();
+
+s1.setName("Manohar");
+
+System.out.println(s1.getName());
+
+Output
+
+Manohar
+Super Easy Analogy 🏦
+
+Think of a bank locker.
+
+Locker = private
+
+Deposit = Setter
+
+Withdraw = Getter
+
+You don't break open the locker.
+
+You use the proper process.
+
+Java works exactly the same way.
+
+🎯 One Question (Don't Code)
+
+Suppose this class:
+
+class Student {
+
+    private int age;
+}
+
+Can you do this in main()?
+
+Student s1 = new Student();
+
+s1.age = 24;
+
+Answer only:
+
+A) Yes
+
+or
+
+B) No
+
+And tell me why in one sentence. This will tell me whether the idea of private has clicked.
