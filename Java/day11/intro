@@ -349,3 +349,195 @@ or
 B) No
 
 And tell me why in one sentence. This will tell me whether the idea of private has clicked.
+
+
+////another explaination
+
+Imagine Your House 🏠
+
+Suppose your father keeps
+
+₹10,00,000
+
+inside a locker.
+
+Question...
+
+Can you open it?
+
+❌ No.
+
+Why?
+
+Because it's locked.
+
+Now if you want money...
+
+What do you do?
+
+You ask your father.
+
+Papa...
+Can I get ₹500?
+
+Then father decides.
+
+If okay...
+
+He gives money.
+
+If not...
+
+He says NO.
+
+This is Encapsulation.
+
+The money is
+
+Hidden
+
+The father is
+
+Controller
+
+You cannot touch money directly.
+
+Java Version
+
+Money
+
+↓
+
+becomes
+
+private int money;
+
+Father
+
+↓
+
+becomes
+
+setMoney()
+
+getMoney()
+Real Example
+
+Without Encapsulation
+
+class Bank{
+
+    int money=100000;
+
+}
+
+Now anyone can do
+
+Bank b=new Bank();
+
+b.money=-100;
+
+😂😂
+
+Bank has negative money.
+
+Possible?
+
+NO.
+
+Bad program.
+
+So Java says...
+
+Hide it.
+
+private int money;
+
+Now
+
+b.money=100;
+
+❌
+
+Java says
+
+NO
+
+Money is private.
+Then How Do We Put Money?
+
+We ask the bank.
+
+Like
+
+Deposit ₹100
+
+Java
+
+setMoney(100);
+
+Think
+
+SET
+
+↓
+
+PUT INSIDE
+
+That's all.
+
+Getter
+
+Now you want to know
+
+How much money is inside?
+
+Can you do
+
+b.money
+
+❌
+
+Private.
+
+Instead ask
+
+Bank
+
+How much money?
+
+Java
+
+getMoney();
+
+Think
+
+GET
+
+↓
+
+TAKE OUT
+Visual
+YOU
+
+   |
+
+setMoney()
+
+   |
+
+BANK
+
+   |
+
+private money
+
+   |
+
+getMoney()
+
+   |
+
+YOU
+
+You never touch money directly.
