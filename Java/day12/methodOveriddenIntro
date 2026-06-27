@@ -1,0 +1,289 @@
+🧠 Now Let's Go One Level Deeper
+
+Question...
+
+Dog inherited
+
+eat();
+
+from Animal.
+
+But suppose Dog doesn't eat like every animal.
+
+Suppose Dog wants to print
+
+Dog is eating biscuits
+
+instead of
+
+Animal is eating
+
+Can Dog change the inherited method?
+
+🤔
+
+YES!!
+
+That's called...
+
+🔥 Method Overriding
+ELI10
+
+Imagine your father says:
+
+"Every family member eats with a spoon."
+
+But your younger brother says:
+
+"No 😂 I eat with chopsticks."
+
+Same action:
+
+Eat
+
+Different behavior.
+
+This is Method Overriding.
+
+Parent
+class Animal {
+
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+
+}
+
+Child
+
+class Dog extends Animal {
+
+    void eat() {
+        System.out.println("Dog is eating biscuits");
+    }
+
+}
+
+Notice something?
+
+Same
+
+eat()
+
+Same return type.
+
+Same parameters.
+
+Only output changed.
+
+Main
+Dog d = new Dog();
+
+d.eat();
+
+Output
+
+Dog is eating biscuits
+
+Question...
+
+Where did
+
+Animal is eating
+
+go?
+
+😂
+
+Dog replaced it.
+
+That's why it's called
+
+OVERRIDING
+
+Think like this:
+
+Parent
+
+eat()
+
+        ↓
+
+Child says
+
+"No...
+
+I'll do my own version."
+
+        ↓
+
+Parent version replaced.
+Real Life Example
+
+Parent
+
+Phone
+
+Call()
+
+Child
+
+iPhone
+
+Call()
+
+Both can call.
+
+But iPhone shows
+
+Beautiful Apple UI
+
+Samsung shows
+
+Samsung UI
+
+Same function.
+
+Different implementation.
+
+Rule of Overriding
+
+The method must have:
+
+✅ Same name
+
+✅ Same parameters
+
+✅ Same return type (for now)
+
+Example
+class Animal {
+
+    void sound() {
+        System.out.println("Animal makes sound");
+    }
+
+}
+
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Dog says Woof");
+    }
+
+}
+
+Main
+
+Dog d = new Dog();
+
+d.sound();
+
+Output
+
+Dog says Woof
+Homework
+HW1
+
+Parent
+
+class Vehicle {
+
+    void start() {
+        System.out.println("Vehicle Started");
+    }
+
+}
+
+Child
+
+Override
+
+start()
+
+Print
+
+Car Started
+HW2
+
+Parent
+
+class Animal {
+
+    void sound() {
+        System.out.println("Animal Sound");
+    }
+
+}
+
+Child
+
+Override
+
+sound()
+
+Print
+
+Dog Barking
+HW3
+
+Parent
+
+class Employee {
+
+    void work() {
+        System.out.println("Employee Working");
+    }
+
+}
+
+Child
+
+Override
+
+work()
+
+Print
+
+Developer Writing Code
+🧠 Mini Quiz
+
+What will this print?
+
+class Animal {
+
+    void eat() {
+        System.out.println("Animal Eating");
+    }
+
+}
+
+class Dog extends Animal {
+
+    void eat() {
+        System.out.println("Dog Eating");
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Dog d = new Dog();
+
+        d.eat();
+
+    }
+
+}
+
+A)
+
+Animal Eating
+
+B)
+
+Dog Eating
+
+And why?

@@ -1,0 +1,497 @@
+DAY 12 - INHERITANCE (extends)
+
+Today's Goal: At the end of this lesson, you'll understand why extends exists. We will NOT learn super today. One step at a time.
+
+Imagine Your Father 👨
+
+Suppose your father has
+
+Eyes 👀
+Nose 👃
+Hair 💇
+
+You also have
+
+Eyes 👀
+Nose 👃
+Hair 💇
+
+Did you create them yourself?
+
+😂 No.
+
+You inherited them from your parents.
+
+This is called:
+
+Inheritance
+
+Meaning:
+
+Getting something from your parent.
+
+Another Example
+
+Imagine Animal.
+
+Every animal can
+
+Eat 🍖
+Sleep 😴
+
+Now Dog is also an Animal.
+
+Can Dog eat?
+
+✅ Yes.
+
+Can Dog sleep?
+
+✅ Yes.
+
+Can Dog bark?
+
+✅ Yes.
+
+Notice:
+
+Dog has
+
+Eat
+Sleep
+
+from Animal.
+
+And
+
+Bark
+
+from itself.
+
+Java Version
+
+Parent class
+
+class Animal {
+
+    void eat() {
+        System.out.println("Animal is eating");
+    }
+
+    void sleep() {
+        System.out.println("Animal is sleeping");
+    }
+
+}
+
+Dog
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Dog is barking");
+    }
+
+}
+
+Most important word:
+
+extends
+
+Read it like English:
+
+Dog extends Animal
+
+↓
+
+Dog is a type of Animal.
+Visual
+        Animal
+       /      \
+   eat()     sleep()
+
+          ▲
+          |
+      extends
+          |
+        Dog
+          |
+       bark()
+
+Dog gets
+
+eat()
+
+sleep()
+
+FREE.
+
+No need to write them again.
+
+Main Method
+public class Main {
+
+    public static void main(String[] args) {
+
+        Dog d = new Dog();
+
+        d.eat();
+
+        d.sleep();
+
+        d.bark();
+
+    }
+
+}
+
+Output
+
+Animal is eating
+Animal is sleeping
+Dog is barking
+Wait...
+
+We never wrote
+
+eat()
+
+inside Dog.
+
+Then why did it work?
+
+Because
+
+extends
+
+copied the parent's abilities.
+
+Think of it as:
+
+Dog
+
+↓
+
+inherits
+
+↓
+
+Animal
+Another Example
+
+Parent
+
+class Vehicle {
+
+    void start() {
+        System.out.println("Vehicle Started");
+    }
+
+}
+
+Child
+
+class Car extends Vehicle {
+
+    void drive() {
+        System.out.println("Car is Driving");
+    }
+
+}
+
+Main
+
+Car c = new Car();
+
+c.start();
+
+c.drive();
+
+Output
+
+Vehicle Started
+Car is Driving
+
+Again
+
+Car never had
+
+start()
+
+It got it from
+
+Vehicle.
+
+Real Life
+
+Imagine your company.
+
+Employee has
+
+ID Card
+Salary
+Login
+
+Developer is also an Employee.
+
+So Developer automatically has
+
+ID Card
+Salary
+Login
+
+PLUS
+
+Developer has
+
+Coding
+Java
+class Employee {
+
+    void login() {
+        System.out.println("Login");
+    }
+
+}
+class Developer extends Employee {
+
+    void code() {
+        System.out.println("Coding");
+    }
+
+}
+
+Developer can do
+
+login();
+code();
+Why Do We Use Inheritance?
+
+Without inheritance
+
+class Dog {
+
+    eat()
+
+    sleep()
+
+    bark()
+
+}
+class Cat {
+
+    eat()
+
+    sleep()
+
+    meow()
+
+}
+class Lion {
+
+    eat()
+
+    sleep()
+
+    roar()
+
+}
+
+You write
+
+eat()
+sleep()
+
+again and again.
+
+With inheritance
+
+Animal
+
+↓
+
+eat()
+
+sleep()
+
+Dog
+
+↓
+
+bark()
+
+Cat
+
+↓
+
+meow()
+
+Lion
+
+↓
+
+roar()
+
+
+No repeated code.
+
+Professional.
+
+---
+
+# Golden Rule
+
+```text
+Parent
+
+↓
+
+Common things
+
+Child
+
+↓
+
+Special things
+Easy Memory Trick
+Father
+
+↓
+
+Property
+
+↓
+
+Son
+
+Java
+
+Parent Class
+
+↓
+
+Methods & Variables
+
+↓
+
+Child Class
+Homework
+HW1
+
+Create Parent
+
+class Animal {
+
+    void eat() {
+        System.out.println("Eating");
+    }
+
+}
+
+Child
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Barking");
+    }
+
+}
+
+Main
+
+Call
+
+eat()
+
+bark()
+HW2
+
+Parent
+
+class Vehicle {
+
+    void start() {
+        System.out.println("Vehicle Started");
+    }
+
+}
+
+Child
+
+class Bike extends Vehicle {
+
+    void ride() {
+        System.out.println("Bike Riding");
+    }
+
+}
+
+Call both.
+
+HW3
+
+Parent
+
+class Employee {
+
+    void login() {
+        System.out.println("Employee Login");
+    }
+
+}
+
+Child
+
+class Developer extends Employee {
+
+    void code() {
+        System.out.println("Writing Java Code");
+    }
+
+}
+
+Call both methods.
+
+🎯 Mini Quiz
+
+Without running:
+
+class Animal {
+
+    void eat() {
+        System.out.println("Eating");
+    }
+
+}
+
+class Dog extends Animal {
+
+    void bark() {
+        System.out.println("Barking");
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Dog d = new Dog();
+
+        d.eat();
+
+        d.bark();
+
+    }
+
+}
+Question
+
+What is the output?
+
+And more importantly...
+
+👉 Why can Dog call eat() even though eat() is not inside the Dog class?
+
+Answer that in your own words.
