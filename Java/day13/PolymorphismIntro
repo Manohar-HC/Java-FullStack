@@ -1,0 +1,285 @@
+Reference Type
+
+↓
+
+What methods can be called?
+
+Object Type
+
+↓
+
+Which method actually executes?
+
+
+Now we'll learn the most confusing one:
+
+🔥 Polymorphism
+
+Don't worry.
+
+I'll make it easier than Encapsulation.
+
+Small Question Before We Start
+
+Suppose:
+
+class Animal {
+
+    void sound() {
+        System.out.println("Animal");
+    }
+
+}
+
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Dog");
+    }
+
+}
+
+class Cat extends Animal {
+
+    void sound() {
+        System.out.println("Cat");
+    }
+
+}
+
+Question:
+
+If I have:
+
+Animal a;
+
+Can a become:
+
+Dog?
+Cat?
+
+🤔
+
+Just answer:
+
+YES or NO.
+
+Don't overthink it.
+
+This answer is the key to understanding Polymorphism. 😎🔥
+
+no
+
+😄 Good guess, bro!
+
+But the correct answer is:
+
+✅ YES
+
+And this is exactly why Polymorphism exists.
+
+Don't worry. I'll explain it in ELI10 style.
+
+Imagine Your Father 👨
+
+Your father says:
+
+"Bring an Animal."
+
+What can you bring?
+
+🐶 Dog?
+
+✅ Yes
+
+🐱 Cat?
+
+✅ Yes
+
+🦁 Lion?
+
+✅ Yes
+
+Because:
+
+Dog IS AN Animal
+
+Cat IS AN Animal
+
+Lion IS AN Animal
+
+This is called an IS-A relationship.
+
+Java Thinks the Same Way
+class Animal {
+
+}
+class Dog extends Animal {
+
+}
+
+Question:
+
+Is Dog an Animal?
+
+✅ YES
+
+So Java allows:
+
+Animal a = new Dog();
+
+Read it like English:
+
+Reference type = Object type
+
+Animal   a   =   new Dog();
+
+Think:
+
+Father's ID card
+
+↓
+
+Son uses it
+Another Example
+
+Suppose:
+
+class Vehicle {
+
+}
+class Car extends Vehicle {
+
+}
+
+Can we write?
+
+Vehicle v = new Car();
+
+✅ YES
+
+Because:
+
+Car IS A Vehicle
+But This Is NOT Allowed
+Dog d = new Animal();
+
+❌ ERROR
+
+Why?
+
+Because every Animal is not a Dog.
+
+Example:
+
+Animal
+
+├── Dog
+├── Cat
+├── Lion
+
+If I create:
+
+new Animal();
+
+Java doesn't know if it's a Dog, Cat, or Lion.
+
+So this is illegal.
+
+Memory Trick
+
+Always ask:
+
+IS-A?
+
+Example:
+
+Dog IS AN Animal
+
+✅ Allowed
+Animal IS A Dog
+
+❌ Not always
+Example
+class Animal {
+
+    void sound() {
+        System.out.println("Animal Sound");
+    }
+
+}
+
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Woof");
+    }
+
+}
+
+Main:
+
+Animal a = new Dog();
+
+a.sound();
+
+Question:
+
+Will it print:
+
+Animal Sound
+
+or
+
+Woof
+
+🤔
+
+This is the magic of Polymorphism.
+
+Homework (Only Prediction)
+
+Don't run this.
+
+Tell me the output.
+
+class Animal {
+
+    void sound() {
+        System.out.println("Animal Sound");
+    }
+
+}
+
+class Dog extends Animal {
+
+    void sound() {
+        System.out.println("Dog Bark");
+    }
+
+}
+
+public class Main {
+
+    public static void main(String[] args) {
+
+        Animal a = new Dog();
+
+        a.sound();
+
+    }
+
+}
+Question:
+
+What will be printed?
+
+A)
+
+Animal Sound
+
+B)
+
+Dog Bark
+
+And why?
