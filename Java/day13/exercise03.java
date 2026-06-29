@@ -7,7 +7,7 @@ class Animalia {
     }
 }
 
-class Dogia extends Animal {
+class Dogia extends Animalia {
 
     void eat() {
         System.out.println("Dog Eating");
@@ -26,7 +26,7 @@ public class exercise03 {
 
         a.eat();
 
-        a.bark();
+//        a.bark();
 
     }
 }

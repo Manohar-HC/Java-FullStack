@@ -1,0 +1,513 @@
+DAY 13 - ABSTRACTION (ELI10)
+
+This is the 4th and final pillar of OOP.
+
+Don't worry.
+
+Most beginners think this is difficult.
+
+I'll make it simple.
+
+🏍️ Imagine a Bike
+
+Question.
+
+When you ride your bike, do you know how the engine works?
+
+Like
+
+Fuel enters cylinder
+
+↓
+
+Piston moves
+
+↓
+
+Spark plug ignites
+
+↓
+
+Power generated
+
+😂😂
+
+No.
+
+You only know
+
+Start Bike
+
+↓
+
+Accelerate
+
+↓
+
+Brake
+
+The complicated things are hidden.
+
+This is called
+
+Abstraction
+Another Example
+
+TV Remote 📺
+
+You press
+
+Power
+
+TV turns on.
+
+Do you know
+
+Motherboard
+Circuit
+CPU
+Display Driver
+
+❌ No.
+
+You only know
+
+Power Button
+
+The implementation is hidden.
+
+Java Says
+
+Suppose we have
+
+class Animal {
+
+    void sound() {
+
+    }
+
+}
+
+Question.
+
+Can every animal make the same sound?
+
+Dog?
+
+Woof
+
+Cat?
+
+Meow
+
+Lion?
+
+Roar
+
+No.
+
+So parent class cannot decide.
+
+It only knows
+
+Every Animal has sound.
+
+But how?
+
+Child will decide.
+
+Java Solution
+abstract class Animal {
+
+    abstract void sound();
+
+}
+
+Question.
+
+Why
+
+abstract
+
+?
+
+Because
+
+Animal doesn't know the implementation.
+
+It leaves it to children.
+
+ELI10 Story
+
+Imagine your school teacher.
+
+Teacher says
+
+Everyone
+
+↓
+
+Complete Homework.
+
+Teacher doesn't tell
+
+Math Homework
+
+English Homework
+
+Science Homework
+
+Each subject teacher decides.
+
+Exactly same.
+
+Parent
+
+Animal
+
+↓
+
+sound()
+
+Child
+
+Dog
+
+↓
+
+Woof
+
+Child
+
+Cat
+
+↓
+
+Meow
+First Abstract Class
+abstract class Animal{
+
+    abstract void sound();
+
+}
+
+Read it.
+
+Animal is abstract.
+
+↓
+
+sound() exists.
+
+↓
+
+No body.
+
+↓
+
+Child must complete it.
+Dog
+class Dog extends Animal{
+
+    void sound(){
+
+        System.out.println("Woof");
+
+    }
+
+}
+
+Dog completed the missing work.
+
+Main
+public class Main{
+
+    public static void main(String[] args){
+
+        Dog d=new Dog();
+
+        d.sound();
+
+    }
+
+}
+
+Output
+
+Woof
+Why Can't We Create Object?
+
+Question
+
+Can we do
+
+Animal a = new Animal();
+
+❌
+
+Java says
+
+Animal is abstract.
+
+Incomplete.
+
+Cannot create object.
+
+Think
+
+Imagine blueprint of a house.
+
+Can you live inside blueprint?
+
+😂
+
+No.
+
+Blueprint is incomplete.
+
+Need real house.
+
+Same
+
+abstract class
+
+↓
+
+Blueprint.
+
+Visual
+Blueprint
+
+↓
+
+House
+
+Java
+
+Abstract Class
+
+↓
+
+Child Class
+Rule
+
+Abstract class
+
+❌ Cannot create object
+
+Animal a=new Animal();
+
+Wrong.
+
+But
+
+Animal a=new Dog();
+
+✅ Correct
+
+Because Dog completed everything.
+
+Memory Trick
+Abstract
+
+↓
+
+Incomplete Blueprint
+
+↓
+
+Child completes it
+Difference
+
+Normal Class
+
+class Animal{
+
+}
+
+Object?
+
+✅ Yes
+
+Abstract Class
+
+abstract class Animal{
+
+}
+
+Object?
+
+❌ No
+
+First Homework
+HW1
+
+Create
+
+abstract class Vehicle{
+
+    abstract void start();
+
+}
+
+Child
+
+class Car extends Vehicle{
+
+    void start(){
+
+        System.out.println("Car Started");
+
+    }
+
+}
+
+Main
+
+Car c=new Car();
+
+c.start();
+HW2
+
+Create
+
+abstract class Shape{
+
+    abstract void draw();
+
+}
+
+Child
+
+class Circle extends Shape{
+
+    void draw(){
+
+        System.out.println("Drawing Circle");
+
+    }
+
+}
+HW3
+
+Create
+
+abstract class Employee{
+
+    abstract void work();
+
+}
+
+Child
+
+class Developer extends Employee{
+
+    void work(){
+
+        System.out.println("Writing Code");
+
+    }
+
+}
+Practice Program
+
+Predict.
+
+abstract class Animal{
+
+    abstract void sound();
+
+}
+
+class Dog extends Animal{
+
+    void sound(){
+
+        System.out.println("Woof");
+
+    }
+
+}
+
+public class Main{
+
+    public static void main(String[] args){
+
+        Dog d=new Dog();
+
+        d.sound();
+
+    }
+
+}
+
+Output?
+
+Interview Question
+Q1
+
+Why can't we create an object of an abstract class?
+
+Q2
+
+Why do we use abstraction?
+
+Q3
+
+Difference between
+
+class
+
+and
+
+abstract class
+Revision Quiz
+
+Answer only.
+
+1
+
+Can abstract class have object?
+
+YES / NO
+
+2
+
+Can child class inherit abstract class?
+
+YES / NO
+
+3
+
+Who completes abstract methods?
+
+A)
+
+Parent
+
+B)
+
+Child
+
+Progress
+Core Java
+
+████████████████░░░░ 65%
+
+✅ Variables
+✅ Scanner
+✅ If Else
+✅ Switch
+✅ Loops
+✅ Arrays
+✅ Methods
+✅ Strings
+✅ OOP
+   ✅ Class
+   ✅ Object
+   ✅ Constructor
+   ✅ this
+   ✅ Encapsulation
+   ✅ Inheritance
+   ✅ Polymorphism
+🟡 Abstraction (Today)
